@@ -359,6 +359,8 @@ When the user requests changes:
 
 **Key benefit:** Most edits only touch one small file, keeping context minimal.
 
+**Note:** Slide numbers are displayed in the bottom-right corner of each slide (except title slides), making it easy to reference specific slides during editing. See [html-slides-style/SKILL.md](../html-slides-style/SKILL.md#slide-numbers) to customize the appearance.
+
 ---
 
 ## Phase 5: Delivery

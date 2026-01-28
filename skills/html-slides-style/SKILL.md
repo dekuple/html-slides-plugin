@@ -13,6 +13,7 @@ This skill covers the CSS architecture, animations, print styles, and JavaScript
 |------|---------|
 | Create template files | [Template Structure](#template-structure) |
 | Change colors/fonts | [CSS Custom Properties](#css-custom-properties) |
+| Customize slide numbers | [Slide Numbers](#slide-numbers) |
 | Add/modify animations | [Animation Definitions](#animation-definitions) |
 | Fix print issues | [Print Styles](#print-styles) |
 | Generate style previews | [Style Previews](#generating-style-previews) |
@@ -89,6 +90,13 @@ Contains everything from `<!DOCTYPE>` through the opening of the slides containe
         }
 
         /* ============================================
+           SLIDE NUMBERING (CSS Counters)
+           ============================================ */
+        body {
+            counter-reset: slide-counter;
+        }
+
+        /* ============================================
            SLIDE BASE
            ============================================ */
         .slide {
@@ -100,6 +108,25 @@ Contains everything from `<!DOCTYPE>` through the opening of the slides containe
             justify-content: center;
             position: relative;
             overflow: hidden;
+            counter-increment: slide-counter;
+        }
+
+        /* Slide number display */
+        .slide::after {
+            content: counter(slide-counter);
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        /* Hide slide number on title slides if desired */
+        .slide--title::after {
+            display: none;
         }
 
         /* ============================================
@@ -658,6 +685,12 @@ Contains everything from `<!DOCTYPE>` through the opening of the slides containe
                 display: none !important;
             }
 
+            /* Slide numbers in print */
+            .slide::after {
+                opacity: 1;
+                color: #666;
+            }
+
             /* Adjust colors for print */
             .slide--dark,
             .slide--light {
@@ -915,6 +948,37 @@ All theme values are defined in `:root`. Change these to change the entire look.
     --duration-normal: 0.6s;
 }
 ```
+
+### Slide Numbers
+
+Slide numbers are automatically displayed in the bottom-right corner of each slide using CSS counters. The number uses `--text-secondary` color at 60% opacity.
+
+**To customize slide number appearance**, override the `.slide::after` pseudo-element:
+
+```css
+/* Move to bottom-left */
+.slide::after {
+    right: auto;
+    left: 1.5rem;
+}
+
+/* Format as "Slide X" */
+.slide::after {
+    content: "Slide " counter(slide-counter);
+}
+
+/* Format as "X / N" (requires JS to set --total-slides) */
+.slide::after {
+    content: counter(slide-counter) " / " var(--total-slides);
+}
+
+/* Hide all slide numbers */
+.slide::after {
+    display: none;
+}
+```
+
+**Note:** Title slides (`.slide--title`) hide their slide number by default.
 
 ### Example Themes
 
