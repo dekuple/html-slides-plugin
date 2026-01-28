@@ -2,12 +2,13 @@
 
 ## Overview
 
-A Claude Code plugin for creating HTML presentations. Five skills:
+A Claude Code plugin for creating HTML presentations. Six skills:
 - `/html-slides` - Main workflow (start here)
 - `/html-slides-slide` - Edit individual slides
 - `/html-slides-style` - Modify theme/CSS
 - `/html-slides-pptx` - Convert PowerPoint files
 - `/html-slides-image` - Add AI-generated images (requires GEMINI_API_KEY)
+- `/html-slides-style-extract` - Extract style from existing PPTX/PDF to use as template
 
 ## Build Command
 
@@ -21,6 +22,14 @@ A Claude Code plugin for creating HTML presentations. Five skills:
 pip install python-pptx
 python scripts/extract_pptx.py input.pptx ./output-dir
 python scripts/generate_slides.py ./output-dir/extracted_content.json ./output-dir
+```
+
+## Style Extraction
+
+```bash
+pip install python-pptx Pillow
+python scripts/extract_style.py model.pptx [output.json]
+# Outputs: CSS custom properties, image-style.json, Google Fonts link
 ```
 
 ## Key Conventions
