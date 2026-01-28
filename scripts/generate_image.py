@@ -128,7 +128,7 @@ def generate_image(prompt: str, api_key: str, size: str = "1024x1024") -> bytes:
         sys.exit(1)
 
     # Gemini API endpoint for image generation
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent"
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
 
     headers = {
         "Content-Type": "application/json",
