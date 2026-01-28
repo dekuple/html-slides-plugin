@@ -1,0 +1,13 @@
+{
+  "name": "html-slides-plugin",
+  "owner": {
+    "name": "Dekuple"
+  },
+  "plugins": [
+    {
+      "name": "html-slides-plugin",
+      "source": "./",
+      "description": "Create stunning, animation-rich HTML presentations with multi-file workflow. Includes slide authoring, theming, and PowerPoint conversion."
+    }
+  ]
+}
