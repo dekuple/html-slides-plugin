@@ -25,22 +25,28 @@ Create stunning, animation-rich HTML presentations with a multi-file workflow. T
 
 ### From GitHub (Recommended)
 
-Install directly from GitHub without cloning:
+Install directly from GitHub in Claude Code:
 
-```bash
-claude skill add github:dekuple/html-slides-plugin
+```
+/plugin marketplace add dekuple/html-slides-plugin
+/plugin install html-slides-plugin@html-slides-plugin
 ```
 
-This adds the plugin to your Claude Code configuration. The skills will be available in all your Claude Code sessions.
+This adds the plugin and its skills to your Claude Code configuration.
 
 ### Local Installation
 
-Alternatively, clone the repo and use it locally:
+Alternatively, clone the repo and install locally:
 
 ```bash
 git clone https://github.com/dekuple/html-slides-plugin.git
-cd html-slides-plugin
-claude skill add .
+```
+
+Then in Claude Code:
+
+```
+/plugin marketplace add /path/to/html-slides-plugin
+/plugin install html-slides-plugin@html-slides-plugin
 ```
 
 ## Usage
