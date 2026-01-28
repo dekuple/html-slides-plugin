@@ -14,29 +14,33 @@ Create stunning, animation-rich HTML presentations with a multi-file workflow. T
 
 | Skill | Description |
 |-------|-------------|
-| `html-slides` | Main orchestrator for presentation projects |
-| `html-slides-slide` | Slide content authoring patterns |
-| `html-slides-style` | Theming and CSS customization |
-| `html-slides-pptx` | PowerPoint to HTML conversion |
+| `/html-slides` | Main orchestrator - start here for new presentations |
+| `/html-slides-slide` | Slide content authoring patterns |
+| `/html-slides-style` | Theming and CSS customization |
+| `/html-slides-pptx` | PowerPoint to HTML conversion |
+| `/html-slides-image` | Add AI-generated images (requires `GEMINI_API_KEY`) |
+| `/html-slides-style-extract` | Extract style from existing PPTX/PDF as template |
 
 ## Installation
 
-### Local Installation
+### From GitHub (Recommended)
 
-Clone or copy this plugin to your project:
+Install directly from GitHub without cloning:
 
 ```bash
-# From the parent directory of your project
-git clone <repo-url> html-slides-plugin
-
-# Run Claude Code with the plugin
-claude --plugin-dir ./html-slides-plugin
+claude skill add github:dekuple/html-slides-plugin
 ```
 
-### Marketplace Installation
+This adds the plugin to your Claude Code configuration. The skills will be available in all your Claude Code sessions.
+
+### Local Installation
+
+Alternatively, clone the repo and use it locally:
 
 ```bash
-claude plugin install html-slides-plugin
+git clone https://github.com/dekuple/html-slides-plugin.git
+cd html-slides-plugin
+claude skill add .
 ```
 
 ## Usage
