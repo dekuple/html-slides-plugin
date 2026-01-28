@@ -1,0 +1,6 @@
+# Claude Code temporary files
+.claude-design/
+
+# Presentation output
+presentation.html
+scripts/__pycache__/
