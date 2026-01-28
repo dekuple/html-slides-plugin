@@ -1,11 +1,34 @@
 ---
 name: html-slides-image
-description: "Add AI-generated images to HTML presentations using Gemini 3 Pro Image Preview. Use sparingly for slides that genuinely benefit from visual content—not every slide needs an image."
+description: "Add images to HTML slides: download logos and web images, generate data charts (SVG), or create AI-generated illustrations. Use when user mentions logos, images, charts, graphs, visuals, or company/brand names that need imagery."
 ---
 
-# HTML Slides — AI Image Generation
+# HTML Slides — Image Generation
 
-Generate consistent, on-brand images for presentations using the Gemini 3 Pro Image Preview API.
+Add images to presentations: download logos/web images, generate SVG charts, or create AI illustrations.
+
+## When to Use This Skill
+
+**Invoke this skill when the user mentions:**
+- Logos, icons, brand images, company logos
+- Charts, graphs, data visualization, metrics
+- Images, visuals, illustrations, pictures
+- "Add pictures", "include images", "use the logos"
+- Specific company/product names that may need logos
+- Data that could be visualized (percentages, comparisons, trends)
+
+**This skill handles THREE types of images:**
+| Type | Trigger | Script |
+|------|---------|--------|
+| **Web Images** | Logos, brands, URLs, "download" | `download_image.py` |
+| **Charts** | Data, percentages, metrics, trends | `generate_chart.py` |
+| **AI-Generated** | Abstract concepts, illustrations | `generate_image.py` (requires GEMINI_API_KEY) |
+
+---
+
+## Image Types Overview
+
+Generate consistent, on-brand images for presentations.
 
 ## Quick Reference
 

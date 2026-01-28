@@ -173,7 +173,7 @@ Open each to see them in action, then tell me:
 3. Anything you'd change?
 ```
 
-### Step 2.4: Generate Image Style Signature (Optional)
+### Step 2.4: Generate Image Style Signature (Recommended)
 
 If the presentation may benefit from AI-generated images, create an image style signature derived from the chosen CSS theme.
 
@@ -232,9 +232,9 @@ Based on chosen style, create:
 
 **Read [html-slides-style/SKILL.md](../html-slides-style/SKILL.md) for template structure.**
 
-### Step 3.1b: Evaluate Slides for Images (Optional)
+### Step 3.1b: Evaluate Slides for Images
 
-If an image style signature was created in Phase 2.4, evaluate which slides would benefit from images.
+Evaluate which slides would benefit from images. **Always perform this evaluation** — present recommendations to the user even if they may decline.
 
 **Use this scoring system:**
 
@@ -341,6 +341,23 @@ slides/
 ./build.sh
 open presentation.html
 ```
+
+### Step 3.4: Offer Image Enhancement
+
+After generating all slides, **always ask the user**:
+
+```
+Your presentation is ready for preview!
+
+Before we finalize, would you like me to add images? I can:
+- **Download logos** for any companies/products mentioned
+- **Generate charts** from your data (bar, pie, line)
+- **Create AI illustrations** for abstract concepts
+
+I've identified [N] slides that could benefit from visuals. Want me to show you the recommendations?
+```
+
+If the user agrees, use [html-slides-image/SKILL.md](../html-slides-image/SKILL.md) to evaluate and generate images.
 
 ---
 

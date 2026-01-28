@@ -7,7 +7,7 @@ A Claude Code plugin for creating HTML presentations. Six skills:
 - `/html-slides-slide` - Edit individual slides
 - `/html-slides-style` - Modify theme/CSS
 - `/html-slides-pptx` - Convert PowerPoint files
-- `/html-slides-image` - Add AI-generated images (requires GEMINI_API_KEY)
+- `/html-slides-image` - Add images: download logos/web images, generate charts, or create AI illustrations (AI images require GEMINI_API_KEY)
 - `/html-slides-style-extract` - Extract style from existing PPTX/PDF to use as template
 
 ## Build Command
